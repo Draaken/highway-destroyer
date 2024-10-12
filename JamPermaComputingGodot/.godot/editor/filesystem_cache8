@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1728728052
+icon.svg::CompressedTexture2D::457458991916121877::1728723492::1728723502::1::::<><>::
+::res://Highway/::1728729113
+Highway.tscn::PackedScene::4781041348865131951::1728729113::0::1::::<><>::res://Highway/WaveFunctionCollapse.gd<>uid://0egu5841hwfy::::res://temp_ressources/highway.png
+WaveFunctionCollapse.gd::GDScript::-1::1728729113::0::1::::<>Node2D<>::
+::res://temp_ressources/::1728729530
+highway.png::CompressedTexture2D::1763380247833468242::1728731653::1728731654::1::::<><>::
+plain.png::CompressedTexture2D::2556979630243809207::1728725468::1728725479::1::::<><>::
+TempAtlas.png::CompressedTexture2D::942902117919511828::1728725683::1728725733::1::::<><>::
