@@ -1,6 +1,49 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728737049
-icon.svg::CompressedTexture2D::5963959294478834180::1728736930::1728736936::1::::<><>::
-WaveFunctionCollapse.gd::GDScript::-1::1728736761::0::1::::<>Node2D<>::
-::res://highway/::1728737049
-highway.png::CompressedTexture2D::4371918102880138107::1728737019::1728737051::1::::<><>::
+::res://::1728737299
+icon.svg::CompressedTexture2D::5963959294478834180::1728737137::1728737274::1::::<><>::
+WaveFunctionCollapse.gd::GDScript::-1::1728737137::0::1::::<>Node2D<>::
+::res://arts/::1728737332
+::res://arts/menu/::1728737485
+::res://arts/menu/ui_main_menu_design/::1728737480
+::res://arts/menu/ui_main_menu_design/ui_main_menu_design/::1728737480
+::res://arts/tile_elements/::1728737495
+::res://arts/tile_elements/Assets - Basic Cubes/::1728737469
+::res://arts/tile_elements/Assets - Basic Cubes/Assets - Basic Cubes/::1728737470
+Example Picture.png::CompressedTexture2D::6922354130826220323::1728737469::1728737498::1::::<><>::
+LICENSE.txt::TextFile::-1::1728737469::0::1::::<><>::
+Preview Picture.png::CompressedTexture2D::1787888670674743001::1728737469::1728737498::1::::<><>::
+::res://arts/tile_elements/Assets - Basic Cubes/Assets - Basic Cubes/Ground/::1728737470
+COLOR PALETTE.png::CompressedTexture2D::3448455126083011021::1728737470::1728737498::1::::<><>::
+Tileset Clover 32x32.png::CompressedTexture2D::1574921234557298902::1728737470::1728737498::1::::<><>::
+Tileset Daisies 32x32.png::CompressedTexture2D::731699820608767094::1728737470::1728737498::1::::<><>::
+Tileset Dried Meadow 32x32.png::CompressedTexture2D::4807410891354900160::1728737470::1728737498::1::::<><>::
+Tileset Earth 32x32.png::CompressedTexture2D::1692959001209409247::1728737470::1728737498::1::::<><>::
+Tileset Flowers 32x32.png::CompressedTexture2D::6208279310077411085::1728737470::1728737498::1::::<><>::
+Tileset Gras 32x32.png::CompressedTexture2D::2195314142088139813::1728737470::1728737498::1::::<><>::
+Tileset Ice 32x32.png::CompressedTexture2D::2281846602673372395::1728737469::1728737498::1::::<><>::
+Tileset Sand 32x32.png::CompressedTexture2D::4182474627514075377::1728737469::1728737498::1::::<><>::
+Tileset Snow 32x32.png::CompressedTexture2D::6931726573502535066::1728737470::1728737498::1::::<><>::
+Tileset Water 32x32.png::CompressedTexture2D::9051750188056962376::1728737470::1728737498::1::::<><>::
+::res://arts/tile_elements/Assets - Basic Cubes/Assets - Basic Cubes/Materials/::1728737470
+COLOR PALETTE.png::CompressedTexture2D::5838537572208050584::1728737470::1728737498::1::::<><>::
+Tileset Birch Wood 32x32.png::CompressedTexture2D::3370707297448872420::1728737470::1728737498::1::::<><>::
+Tileset Stone Brown 32x32.png::CompressedTexture2D::5238111768286070423::1728737470::1728737498::1::::<><>::
+Tileset Stone Gray 32x32.png::CompressedTexture2D::8255670127975011711::1728737470::1728737498::1::::<><>::
+Tileset Stone Wall Brown 32x32.png::CompressedTexture2D::8678255394939442560::1728737470::1728737498::1::::<><>::
+Tileset Stone Wall Gray 32x32.png::CompressedTexture2D::586689863427842037::1728737470::1728737498::1::::<><>::
+Tileset Wood Dark Brown 32x32.png::CompressedTexture2D::5339362302468176715::1728737470::1728737498::1::::<><>::
+Tileset Wood Light Brown 32x32.png::CompressedTexture2D::3079194160823544449::1728737470::1728737498::1::::<><>::
+Tileset Wood Medium Brown 32x32.png::CompressedTexture2D::2472120135134413461::1728737470::1728737498::1::::<><>::
+::res://arts/tile_elements/Assets - Basic Cubes/Assets - Basic Cubes/Trees/::1728737469
+COLOR PALETTE.png::CompressedTexture2D::3239522581630585700::1728737469::1728737498::1::::<><>::
+Tileset Birch Tree 32x32.png::CompressedTexture2D::7999730576851031064::1728737469::1728737498::1::::<><>::
+Tileset Leaves Brown 32x32.png::CompressedTexture2D::4349002484640662828::1728737469::1728737498::1::::<><>::
+Tileset Leaves Green 32x32.png::CompressedTexture2D::6071615378669327911::1728737469::1728737498::1::::<><>::
+Tileset Leaves Red 32x32.png::CompressedTexture2D::5090609599528897776::1728737469::1728737498::1::::<><>::
+Tileset Leaves White 32x32.png::CompressedTexture2D::9136897520163530008::1728737469::1728737498::1::::<><>::
+Tileset Tree Dark Brown 32x32.png::CompressedTexture2D::5555359190426133195::1728737469::1728737498::1::::<><>::
+Tileset Tree Light Brown 32x32.png::CompressedTexture2D::7617031663174469501::1728737469::1728737498::1::::<><>::
+Tileset Tree Medium Brown 32x32.png::CompressedTexture2D::4388641685924303423::1728737469::1728737498::1::::<><>::
+::res://highway/::1728737274
+highway.png::CompressedTexture2D::4371918102880138107::1728737137::1728737274::1::::<><>::
+::res://Main_Menu/::1728737285
