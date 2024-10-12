@@ -1,5 +1,11 @@
+TextureRect
+Button
+TextureButton
+Node
+VBoxContainer
+HBoxContainer
+MarginContainer
 Control
 TileMapLayer
-Node
 Node2D
 TileMap
