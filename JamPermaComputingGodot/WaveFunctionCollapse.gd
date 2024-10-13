@@ -18,7 +18,7 @@ var is_paused = true
 
 
 var total_cells_set = 0
-var max_cells = 200
+var max_cells = 250
 
 var names = [
 	"road",
@@ -68,8 +68,8 @@ var tiles_data: Dictionary = {
 	"branch_right": [Vector2(0,0),0.1],
 	"branch_top": [Vector2(0,0),0.1],
 	"branch_bottom": [Vector2(0,0),0.1],
-	"compost": [Vector2(3,0),1000,2],
-	"water": [Vector2(2,0),1500, 0],
+	"compost": [Vector2(3,0),2000,2],
+	"water": [Vector2(2,0),1000, 0],
 	"tree": [Vector2(1,0),1000, 3],
 	"sand": [Vector2(5,0),0,1],
 	"sand_right": [Vector2(9,0),800,1],
@@ -264,6 +264,11 @@ func collapse_cell(cell_coord, direction, old_cell_tile):
 	#if not ignore it
 func end_game():
 	if get_tree():
+		var timer = Timer.new()
+		timer.wait_time = 5
+		add_child(timer)
+		timer.start()
+		await timer.timeout
 		get_tree().change_scene_to_file("res://endscene.tscn")
 	
 

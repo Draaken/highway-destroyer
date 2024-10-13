@@ -42,7 +42,7 @@ func create_pilot():
 	$"..".set_cell(random_tile, true)
 	if get_tree():
 		var timer = Timer.new()
-		timer.wait_time = (random.randi_range(6,20))
+		timer.wait_time = (random.randi_range(4,10))
 		add_child(timer)
 		timer.start()
 		await timer.timeout

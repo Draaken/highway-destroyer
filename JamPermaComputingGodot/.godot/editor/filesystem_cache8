@@ -1,30 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728832652
+::res://::1728850561
 background.png::CompressedTexture2D::8740453534737798092::1728825495::1728825583::1::::<><>::
-control_player_one.gd::GDScript::-1::1728828412::0::1::::<>Control<>::
-control_player_two.gd::GDScript::-1::1728828412::0::1::::<>Control<>::
-crack.tscn::PackedScene::8054710736159598315::1728832584::0::1::::<><>::uid://b6hhrp6sly7m7::::res://crack_sprite.png
+control_player_one.gd::GDScript::-1::1728850440::0::1::::<>Control<>::
+control_player_two.gd::GDScript::-1::1728850440::0::1::::<>Control<>::
+crack.tscn::PackedScene::8054710736159598315::1728832832::0::1::::<><>::uid://b6hhrp6sly7m7::::res://crack_sprite.png
 crack_sprite.png::CompressedTexture2D::4577181694768978984::1728822219::1728822219::1::::<><>::
-Cursor.gd::GDScript::-1::1728826731::0::1::::<>Node2D<>::
+Cursor.gd::GDScript::-1::1728832844::0::1::::<>Node2D<>::
 cursor.png::CompressedTexture2D::9021301736954953361::1728756597::1728756599::1::::<><>::
-endscene.gd::GDScript::-1::1728827422::0::1::::<>Node<>::
-endscene.tscn::PackedScene::2757495804034773148::1728832584::0::1::::<><>::res://endscene.gd<>uid://dwr680t5wqnyi::::res://background.png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png<>uid://dm54ov0v2srfj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png<>uid://dscwyivaof4l6::::res://replay.png
-export_presets.cfg::TextFile::-1::1728831209::0::1::::<><>::
-HighwayGenerator.tscn::PackedScene::2709468471246114914::1728832584::0::1::::<><>::res://WaveFunctionCollapse.gd<>res://highway/highway_generator_2.gd<>uid://b0ey3qrxsl657::::res://new_tileset.png
+endscene.gd::GDScript::-1::1728832844::0::1::::<>Node<>::
+endscene.tscn::PackedScene::2757495804034773148::1728832832::0::1::::<><>::res://endscene.gd<>uid://dwr680t5wqnyi::::res://background.png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png<>uid://dm54ov0v2srfj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png<>uid://dscwyivaof4l6::::res://replay.png
+export_presets.cfg::TextFile::-1::1728832863::0::1::::<><>::
+HighwayGenerator.tscn::PackedScene::2709468471246114914::1728832832::0::1::::<><>::res://WaveFunctionCollapse.gd<>res://highway/highway_generator_2.gd<>uid://b0ey3qrxsl657::::res://new_tileset.png
 highway_generator_2.tscn::PackedScene::6623161611287457032::1728814682::0::1::::<><>::uid://ctajvq7n1tbfk::::res://tilemap.png<>res://HighwayGenerator2.gd
 icon.svg::CompressedTexture2D::5963959294478834180::1728736930::1728736936::1::::<><>::
-main_scence.gd::GDScript::-1::1728823717::0::1::::<>Node2D<>::
-main_scence.tscn::PackedScene::9015782052458161971::1728832584::0::1::::<><>::res://Cursor.gd<>res://main_scence.gd<>uid://beuqsxv25i1fq::::res://HighwayGenerator.tscn<>uid://d1r8ry7e0u44t::::res://cursor.png<>uid://dwo1axkvi3pa3::::res://One Man Symphony - Stealth Theme 02.mp3
-menu.gd::GDScript::-1::1728827190::0::1::::<>Node<>::
-menu.tscn::PackedScene::662220796177086335::1728832584::0::1::::<><>::res://menu.gd<>uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>uid://dkje6fdubdilr::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/titleqq.png<>uid://blemmjtv6ji7s::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_final.png<>uid://dm54ov0v2srfj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png<>uid://cqncaj0vfxs7c::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/numberrr.png<>uid://v6s2axk6kccf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/options_final.png<>uid://cu7ant2qs2xjn::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_1 (2).png<>uid://c187nakxbsvl6::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_2 (1).png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png
+main_scence.gd::GDScript::-1::1728832844::0::1::::<>Node2D<>::
+main_scence.tscn::PackedScene::9015782052458161971::1728832832::0::1::::<><>::res://Cursor.gd<>res://main_scence.gd<>uid://beuqsxv25i1fq::::res://HighwayGenerator.tscn<>uid://d1r8ry7e0u44t::::res://cursor.png<>uid://dwo1axkvi3pa3::::res://One Man Symphony - Stealth Theme 02.mp3
+menu.gd::GDScript::-1::1728832845::0::1::::<>Node<>::
+menu.tscn::PackedScene::662220796177086335::1728832832::0::1::::<><>::res://menu.gd<>uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>uid://dkje6fdubdilr::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/titleqq.png<>uid://blemmjtv6ji7s::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_final.png<>uid://dm54ov0v2srfj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png<>uid://cqncaj0vfxs7c::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/numberrr.png<>uid://v6s2axk6kccf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/options_final.png<>uid://cu7ant2qs2xjn::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_1 (2).png<>uid://c187nakxbsvl6::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_2 (1).png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png
 new_tileset.png::CompressedTexture2D::4150907363420697392::1728821882::1728821896::1::::<><>::
 One Man Symphony - Stealth Theme 02.mp3::AudioStreamMP3::8733897765935830488::1728823657::1728823658::1::::<><>::
-options.gd::GDScript::-1::1728825578::0::1::::<>Node<>::
-options.tscn::PackedScene::3463586278529225820::1728832584::0::1::::<><>::uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>res://options.gd<>uid://c5t0gc7wkl0e0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/key.png<>uid://bpungxak6vqhf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_1.png<>uid://e42p5yvgqus0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_2.png<>res://control_player_one.gd<>uid://bhe7t6hmkpk2k::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/pixel-art-wooden-buttons-for-game-and-app-interface-icon-for-8bit-game-on-white-background-vector.png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png<>res://control_player_two.gd
-players.gd::GDScript::-1::1728827077::0::1::::<>Node<>::
-player_tiles.tscn::PackedScene::3472413326161131518::1728832584::0::1::::<><>::
+options.gd::GDScript::-1::1728832845::0::1::::<>Node<>::
+options.tscn::PackedScene::3463586278529225820::1728850440::0::1::::<><>::uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>res://options.gd<>uid://c5t0gc7wkl0e0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/key.png<>uid://bpungxak6vqhf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_1.png<>uid://e42p5yvgqus0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_2.png<>res://control_player_one.gd<>uid://bhe7t6hmkpk2k::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/pixel-art-wooden-buttons-for-game-and-app-interface-icon-for-8bit-game-on-white-background-vector.png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png<>res://control_player_two.gd
+players.gd::GDScript::-1::1728832845::0::1::::<>Node<>::
+player_tiles.tscn::PackedScene::3472413326161131518::1728832832::0::1::::<><>::
 replay.png::CompressedTexture2D::8428169077613218385::1728827273::1728827329::1::::<><>::
-WaveFunctionCollapse.gd::GDScript::-1::1728832581::0::1::::<>Node2D<>::
+WaveFunctionCollapse.gd::GDScript::-1::1728832831::0::1::::<>Node2D<>::
 ::res://arts/::1728829052
 ::res://arts/menu/::1728825671
 ::res://arts/menu/ui_main_menu_design/::1728825671
@@ -45,7 +45,8 @@ quit.png::CompressedTexture2D::8065246443863796759::1728825581::1728825687::1:::
 start_final.png::CompressedTexture2D::3167506011225122314::1728825581::1728825687::1::::<><>::
 start_green.png::CompressedTexture2D::7661855616232301825::1728825581::1728825689::1::::<><>::
 titleqq.png::CompressedTexture2D::7880028382989618959::1728825581::1728825690::1::::<><>::
-::res://highway/::1728828965
-highway_generator_2.gd::GDScript::-1::1728828111::0::1::::<>Node2D<>::
-rules.txt::TextFile::-1::1728810319::0::1::::<><>::
+::res://highway/::1728832845
+highway_generator_2.gd::GDScript::-1::1728832844::0::1::::<>Node2D<>::
+rules.json::JSON::-1::1728810319::0::1::::<><>::
+rules.txt::TextFile::-1::1728832845::0::1::::<><>::
 ::res://Main_Menu/::1728825765

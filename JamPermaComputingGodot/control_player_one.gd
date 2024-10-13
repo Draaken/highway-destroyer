@@ -2,7 +2,7 @@ extends Control
 
 var can_change_key = false
 var action_string
-enum ACTIONS {left1,right1,Up1,Down1,Slash1}
+enum ACTIONS {left1,right1,top1,bottom1,action1}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_set_keys()  
@@ -22,13 +22,13 @@ func b_change_key_left1():
 func b_change_key_right1():
 	_mark_button("right1")
 
-func b_change_key_Up1():
+func b_change_key_top1():
 	_mark_button("top1")
 	
-func b_change_key_Down1():
+func b_change_key_bottom1():
 	_mark_button("bottom1")
 
-func b_change_key_Slash1():
+func b_change_key_action1():
 	_mark_button("action1")
 	
 func _mark_button(string):
@@ -65,9 +65,6 @@ func _change_key(new_key):
 
 
 
-func _on_but_up_pressed() -> void:
-	b_change_key_Up1()
-
 
 func _on_but_right_1_pressed() -> void:
 	b_change_key_right1()
@@ -79,8 +76,15 @@ func _on_but_left_1_pressed() -> void:
 	b_change_key_left1()
 
 
-func _on_but_slash_pressed() -> void:
-	b_change_key_Slash1()
 
-func _on_but_down_pressed() -> void:
-	b_change_key_Down1()
+func _on_but_top_1_pressed() -> void:
+	b_change_key_top1()
+
+
+func _on_but_bottom_1_pressed() -> void:
+	b_change_key_bottom1()
+	
+	
+
+func _on_but_action_1_pressed() -> void:
+	b_change_key_action1()
