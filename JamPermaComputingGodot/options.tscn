@@ -181,7 +181,7 @@ icon = ExtResource("7_qg0wt")
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Up1" type="Button" parent="ControlPlayerOne"]
+[node name="but_top1" type="Button" parent="ControlPlayerOne"]
 layout_mode = 0
 offset_left = 459.0
 offset_top = 635.0
@@ -200,7 +200,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Down1" type="Button" parent="ControlPlayerOne"]
+[node name="but_bottom1" type="Button" parent="ControlPlayerOne"]
 layout_mode = 0
 offset_left = 450.0
 offset_top = 714.0
@@ -238,7 +238,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Slash1" type="Button" parent="ControlPlayerOne"]
+[node name="but_action1" type="Button" parent="ControlPlayerOne"]
 layout_mode = 0
 offset_left = 425.0
 offset_top = 798.0
@@ -350,7 +350,7 @@ icon = ExtResource("7_qg0wt")
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Up2" type="Button" parent="ControlPlayerTwo"]
+[node name="but_top2" type="Button" parent="ControlPlayerTwo"]
 layout_mode = 0
 offset_left = 459.0
 offset_top = 635.0
@@ -369,7 +369,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Down2" type="Button" parent="ControlPlayerTwo"]
+[node name="but_bottom2" type="Button" parent="ControlPlayerTwo"]
 layout_mode = 0
 offset_left = 450.0
 offset_top = 714.0
@@ -407,7 +407,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="but_Slash2" type="Button" parent="ControlPlayerTwo"]
+[node name="but_action2" type="Button" parent="ControlPlayerTwo"]
 layout_mode = 0
 offset_left = 425.0
 offset_top = 798.0
@@ -428,12 +428,18 @@ expand_icon = true
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="ControlPlayerOne/but_left1" to="ControlPlayerOne" method="_on_but_left_1_pressed"]
-[connection signal="pressed" from="ControlPlayerOne/but_Up1" to="ControlPlayerOne" method="_on_but_up_pressed"]
-[connection signal="pressed" from="ControlPlayerOne/but_Down1" to="ControlPlayerOne" method="_on_but_down_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_top1" to="ControlPlayerOne" method="_on_but_top_1_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_top1" to="ControlPlayerOne" method="_on_but_up_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_bottom1" to="ControlPlayerOne" method="_on_but_bottom_1_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_bottom1" to="ControlPlayerOne" method="_on_but_down_pressed"]
 [connection signal="pressed" from="ControlPlayerOne/but_right1" to="ControlPlayerOne" method="_on_but_right_1_pressed"]
-[connection signal="pressed" from="ControlPlayerOne/but_Slash1" to="ControlPlayerOne" method="_on_but_slash_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_action1" to="ControlPlayerOne" method="_on_but_slash_pressed"]
+[connection signal="pressed" from="ControlPlayerOne/but_action1" to="ControlPlayerOne" method="_on_but_action_1_pressed"]
 [connection signal="pressed" from="ControlPlayerTwo/but_left2" to="ControlPlayerTwo" method="_on_but_left_2_pressed"]
-[connection signal="pressed" from="ControlPlayerTwo/but_Up2" to="ControlPlayerTwo" method="_on_but_up_2_pressed"]
-[connection signal="pressed" from="ControlPlayerTwo/but_Down2" to="ControlPlayerTwo" method="_on_but_down_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_top2" to="ControlPlayerTwo" method="_on_but_top_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_top2" to="ControlPlayerTwo" method="_on_but_up_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_bottom2" to="ControlPlayerTwo" method="_on_but_bottom_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_bottom2" to="ControlPlayerTwo" method="_on_but_down_2_pressed"]
 [connection signal="pressed" from="ControlPlayerTwo/but_right2" to="ControlPlayerTwo" method="_on_but_right_2_pressed"]
-[connection signal="pressed" from="ControlPlayerTwo/but_Slash2" to="ControlPlayerTwo" method="_on_but_slash_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_action2" to="ControlPlayerTwo" method="_on_but_action_2_pressed"]
+[connection signal="pressed" from="ControlPlayerTwo/but_action2" to="ControlPlayerTwo" method="_on_but_slash_2_pressed"]
