@@ -1,24 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728756331
+::res://::1728813503
 icon.svg::CompressedTexture2D::5963959294478834180::1728737137::1728737274::1::::<><>::
-menu.tscn::PackedScene::6343499081847790675::1728756331::0::1::::<><>::res://menu.gd<>uid://dhfpv33j1y8s0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_green.png<>uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>uid://f2rwcp0r2gn5::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/options.png<>uid://104tg8ephhfl::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/title1.png<>uid://cqncaj0vfxs7c::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/numberrr.png<>uid://cu7ant2qs2xjn::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_1 (2).png<>uid://c187nakxbsvl6::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_2 (1).png
-menu.gd::GDScript::-1::1728755093::0::1::::<>Node<>::
-start.gd::GDScript::-1::1728751277::0::1::::<>Button<>::
+menu.gd::GDScript::-1::1728811205::0::1::::<>Node<>::
+menu.tscn::PackedScene::8775544367865426764::1728811221::0::1::::<><>::res://menu.gd<>uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>uid://dkje6fdubdilr::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/titleqq.png<>uid://blemmjtv6ji7s::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_final.png<>uid://dm54ov0v2srfj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png<>uid://cqncaj0vfxs7c::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/numberrr.png<>uid://v6s2axk6kccf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/options_final.png<>uid://cu7ant2qs2xjn::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_1 (2).png<>uid://c187nakxbsvl6::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_2 (1).png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png
+options.tscn::PackedScene::6907934036096276524::1728813503::0::1::::<><>::uid://baugf2kjl36tj::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png<>res://options.gd<>uid://c5t0gc7wkl0e0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/key.png<>uid://bpungxak6vqhf::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_1.png<>uid://e42p5yvgqus0::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/player_2.png<>uid://cdyvsxlv6m07g::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png
+options.gd::GDScript::-1::1728811977::0::1::::<>Node<>::
 WaveFunctionCollapse.gd::GDScript::-1::1728737533::0::1::::<>Node2D<>::
 ::res://arts/::1728737332
 ::res://arts/menu/::1728737485
 ::res://arts/menu/ui_main_menu_design/::1728737480
-::res://arts/menu/ui_main_menu_design/ui_main_menu_design/::1728756431
+::res://arts/menu/ui_main_menu_design/ui_main_menu_design/::1728813809
+back.png::CompressedTexture2D::5034261391562091610::1728809839::1728810068::1::::<><>::
 Firefly 20241012185446.png::CompressedTexture2D::2428082903703673403::1728756068::1728756096::1::::<><>::
-MainMenu.tscn::PackedScene::8522819529697488120::1728746549::0::1::::<><>::uid://0qdc4opeeetl::::res://arts/menu/ui_main_menu_design/ui_main_menu_design/start.png
+key.png::CompressedTexture2D::6919258648930746045::1728809980::1728810068::1::::<><>::
 numberrr.png::CompressedTexture2D::5922821722675043442::1728755554::1728755585::1::::<><>::
 options.png::CompressedTexture2D::407754023271151928::1728755674::1728755677::1::::<><>::
+options.txt::TextFile::-1::1728759096::0::1::::<><>::
+options_final.png::CompressedTexture2D::1539102585106439313::1728810762::1728810766::1::::<><>::
+pixel-art-wooden-buttons-for-game-and-app-interface-icon-for-8bit-game-on-white-background-vector.png::CompressedTexture2D::2887978613624962592::1728813809::1728813813::1::::<><>::
 Players_1 (2).png::CompressedTexture2D::6242702584003007187::1728756069::1728756095::1::::<><>::
 Players_2 (1).png::CompressedTexture2D::6667841943443434601::1728756070::1728756095::1::::<><>::
-Players_4 (1).png::CompressedTexture2D::1450186945744336932::1728756071::1728756095::1::::<><>::
+player_1.png::CompressedTexture2D::3481342137547853835::1728811557::1728811581::1::::<><>::
+player_2.png::CompressedTexture2D::342290088871755853::1728811577::1728811581::1::::<><>::
+quit.png::CompressedTexture2D::8065246443863796759::1728809911::1728810068::1::::<><>::
+start_final.png::CompressedTexture2D::3167506011225122314::1728810740::1728810766::1::::<><>::
 start_green.png::CompressedTexture2D::7661855616232301825::1728755785::1728755789::1::::<><>::
-title1.png::CompressedTexture2D::1878314467635473593::1728753767::1728753797::1::::<><>::
-title.png::CompressedTexture2D::3290073864864731352::1728752949::1728756420::1::::<><>::
 titleqq.png::CompressedTexture2D::7880028382989618959::1728753926::1728756435::1::::<><>::
 ::res://arts/tile_elements/::1728738334
 ::res://arts/tile_elements/Assets - Basic Cubes/::1728737469

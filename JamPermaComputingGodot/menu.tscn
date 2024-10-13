@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwm3rdtdsp1jb"]
+[gd_scene load_steps=11 format=3 uid="uid://dxa660i3hvfiq"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_fmygg"]
-[ext_resource type="Texture2D" uid="uid://dhfpv33j1y8s0" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_green.png" id="1_wvame"]
 [ext_resource type="Texture2D" uid="uid://baugf2kjl36tj" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png" id="2_fxy6k"]
-[ext_resource type="Texture2D" uid="uid://f2rwcp0r2gn5" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/options.png" id="2_n5tt8"]
 [ext_resource type="Texture2D" uid="uid://dkje6fdubdilr" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/titleqq.png" id="3_4cmqq"]
+[ext_resource type="Texture2D" uid="uid://blemmjtv6ji7s" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/start_final.png" id="4_hqoqa"]
+[ext_resource type="Texture2D" uid="uid://dm54ov0v2srfj" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png" id="5_fwltv"]
 [ext_resource type="Texture2D" uid="uid://cqncaj0vfxs7c" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/numberrr.png" id="5_tkb5v"]
+[ext_resource type="Texture2D" uid="uid://v6s2axk6kccf" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/options_final.png" id="6_phlvp"]
 [ext_resource type="Texture2D" uid="uid://cu7ant2qs2xjn" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_1 (2).png" id="7_d3w3d"]
 [ext_resource type="Texture2D" uid="uid://c187nakxbsvl6" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/Players_2 (1).png" id="8_cav13"]
+[ext_resource type="Texture2D" uid="uid://cdyvsxlv6m07g" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png" id="10_cpbts"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_fmygg")
@@ -15,59 +17,84 @@ script = ExtResource("1_fmygg")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(47.88, 26.88)
+scale = Vector2(17.52, 17.8)
 texture = ExtResource("2_fxy6k")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="TextureRect" parent="."]
-offset_left = 114.0
-offset_top = -290.0
-offset_right = 2034.0
-offset_bottom = 790.0
-scale = Vector2(0.88, 1)
+offset_left = -1.00002
+offset_top = -79.0
+offset_right = 1919.0
+offset_bottom = 1001.0
+scale = Vector2(0.360001, 0.4)
 texture = ExtResource("3_4cmqq")
+metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="Button" parent="."]
-offset_left = 929.0
-offset_top = 620.0
-offset_right = 937.0
-offset_bottom = 628.0
-scale = Vector2(1.12, 1.04)
+visible = false
+offset_left = 324.0
+offset_top = 276.0
+offset_right = 332.0
+offset_bottom = 284.0
+scale = Vector2(0.88, 0.680001)
 action_mode = 0
 keep_pressed_outside = true
 
 [node name="TextureRect" type="TextureRect" parent="Start"]
 layout_mode = 0
+offset_left = -191.667
+offset_top = -69.1176
+offset_right = -151.667
+offset_bottom = -29.1176
+scale = Vector2(11.5872, 6.29237)
+texture = ExtResource("4_hqoqa")
+expand_mode = 1
+
+[node name="quit" type="Button" parent="."]
+visible = false
+offset_left = 335.0
+offset_top = 505.0
+offset_right = 343.0
+offset_bottom = 513.0
+scale = Vector2(0.880001, 0.560001)
+action_mode = 0
+keep_pressed_outside = true
+
+[node name="TextureRect" type="TextureRect" parent="quit"]
+layout_mode = 0
 offset_left = -235.0
 offset_top = -84.0
 offset_right = -195.0
 offset_bottom = -44.0
-scale = Vector2(11.5872, 6.29237)
-texture = ExtResource("1_wvame")
+scale = Vector2(14.2658, 5.94622)
+texture = ExtResource("5_fwltv")
 expand_mode = 1
 
 [node name="Options" type="Button" parent="."]
-offset_left = 926.0
-offset_top = 824.0
-offset_right = 934.0
-offset_bottom = 832.0
+visible = false
+offset_left = 338.0
+offset_top = 409.0
+offset_right = 346.0
+offset_bottom = 417.0
+scale = Vector2(0.76, 0.455507)
 
 [node name="Options" type="TextureRect" parent="Options"]
 layout_mode = 0
-offset_left = -200.0
-offset_top = -89.0
-offset_right = -160.0
-offset_bottom = -49.0
-scale = Vector2(11.1072, 6.29237)
-texture = ExtResource("2_n5tt8")
+offset_left = -241.667
+offset_top = -156.25
+offset_right = -201.667
+offset_bottom = -116.25
+scale = Vector2(12.9822, 9.30417)
+texture = ExtResource("6_phlvp")
 expand_mode = 1
 
 [node name="Number" type="Button" parent="."]
-visible = false
-offset_left = 897.0
-offset_top = 767.0
-offset_right = 905.0
-offset_bottom = 775.0
+offset_left = 321.0
+offset_top = 380.0
+offset_right = 329.0
+offset_bottom = 388.0
+scale = Vector2(0.64, 0.560001)
 
 [node name="Options" type="TextureRect" parent="Number"]
 layout_mode = 0
@@ -80,11 +107,10 @@ texture = ExtResource("5_tkb5v")
 expand_mode = 1
 
 [node name="Num1" type="Button" parent="."]
-visible = false
-offset_left = 965.0
-offset_top = 800.0
-offset_right = 973.0
-offset_bottom = 808.0
+offset_left = 404.0
+offset_top = 406.0
+offset_right = 412.0
+offset_bottom = 414.0
 scale = Vector2(0.455878, 0.480002)
 
 [node name="num1" type="TextureRect" parent="Num1"]
@@ -97,11 +123,10 @@ scale = Vector2(1.51334, 1.70677)
 texture = ExtResource("7_d3w3d")
 
 [node name="Num2" type="Button" parent="."]
-visible = false
-offset_left = 688.0
-offset_top = 436.0
-offset_right = 696.0
-offset_bottom = 444.0
+offset_left = 84.0
+offset_top = 54.0
+offset_right = 92.0
+offset_bottom = 62.0
 
 [node name="num2" type="TextureRect" parent="Num2"]
 layout_mode = 0
@@ -113,4 +138,25 @@ scale = Vector2(2.59805, 2.80794)
 texture = ExtResource("8_cav13")
 expand_mode = 1
 
+[node name="back" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 325.0
+offset_right = 400.0
+offset_bottom = 333.0
+scale = Vector2(0.68, 0.56)
+
+[node name="num2" type="TextureRect" parent="back"]
+layout_mode = 0
+offset_left = 45.0001
+offset_top = 405.0
+offset_right = 85.0001
+offset_bottom = 445.0
+scale = Vector2(10.122, 5.40794)
+texture = ExtResource("10_cpbts")
+expand_mode = 1
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

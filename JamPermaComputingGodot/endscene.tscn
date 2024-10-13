@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://de2x3p2o6lmrs"]
+
+[ext_resource type="Script" path="res://endscene.gd" id="1_8tcc8"]
+[ext_resource type="Texture2D" uid="uid://baugf2kjl36tj" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/Firefly 20241012185446.png" id="1_ace0f"]
+[ext_resource type="Texture2D" uid="uid://cdyvsxlv6m07g" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/back.png" id="3_p7h6s"]
+[ext_resource type="Texture2D" uid="uid://dm54ov0v2srfj" path="res://arts/menu/ui_main_menu_design/ui_main_menu_design/quit.png" id="4_yynb2"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_8tcc8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(17.52, 17.48)
+texture = ExtResource("1_ace0f")
+expand_mode = 1
+
+[node name="Back" type="Button" parent="."]
+offset_left = -238.0
+offset_top = -311.0
+offset_right = -230.0
+offset_bottom = -303.0
+scale = Vector2(1.08, 0.96)
+
+[node name="TextureRect" type="TextureRect" parent="Back"]
+layout_mode = 0
+offset_left = 282.407
+offset_top = 881.25
+offset_right = 609.407
+offset_bottom = 1067.25
+scale = Vector2(0.617326, 0.583333)
+texture = ExtResource("3_p7h6s")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 148.0
+offset_top = -327.0
+offset_right = 156.0
+offset_bottom = -319.0
+
+[node name="TextureRect" type="TextureRect" parent="Quit"]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 869.0
+offset_right = 683.0
+offset_bottom = 1055.0
+scale = Vector2(0.639999, 0.48)
+texture = ExtResource("4_yynb2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -43.0
+offset_top = 35.0
+offset_right = -3.0
+offset_bottom = 75.0
+scale = Vector2(0.397256, 0.568658)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -1936.0
+offset_top = 321.0
+offset_right = 3910.0
+offset_bottom = 3054.0
+theme_override_colors/font_color = Color(1.10219e-05, 0.902705, 3.85046e-07, 1)
+theme_override_constants/shadow_offset_x = 215
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 61
+text = "... The surface of the world is entirely covered,
+ an intricate mix of roads and enduring 
+nature stretches itself across the continents.
+ The future is uncertain."
+horizontal_alignment = 1
+justification_flags = 139
+max_lines_visible = 6
+visible_characters_behavior = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
