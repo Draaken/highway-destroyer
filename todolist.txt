@@ -1,9 +1,9 @@
-- Pause the rendering process to let the player
-create the first tiles
+- [DONE] Pause the rendering process to let the player
+create the first tiles 
 - limit the number of tiles available to the player
 -generate pre existing tiles? water?
 fix the vertical tree generation
-- fix the road generation
+- fix the road generation -> other system for the road?
 -make background
 - end of the game and reload
 - intro text? after or before the game?

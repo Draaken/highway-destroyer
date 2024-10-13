@@ -1,17 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1pku33q3qout"]
+[gd_scene load_steps=6 format=3 uid="uid://d1pku33q3qout"]
 
 [ext_resource type="Script" path="res://Cursor.gd" id="1_7xgbv"]
+[ext_resource type="Script" path="res://main_scence.gd" id="1_w1ej1"]
 [ext_resource type="PackedScene" uid="uid://beuqsxv25i1fq" path="res://HighwayGenerator.tscn" id="1_wv3dv"]
 [ext_resource type="Texture2D" uid="uid://d1r8ry7e0u44t" path="res://cursor.png" id="2_7mqgm"]
+[ext_resource type="AudioStream" uid="uid://dwo1axkvi3pa3" path="res://One Man Symphony - Stealth Theme 02.mp3" id="5_8072c"]
 
 [node name="MainScence" type="Node2D"]
+script = ExtResource("1_w1ej1")
 
 [node name="Node2D" parent="." instance=ExtResource("1_wv3dv")]
 
-[node name="Cursor" type="Node2D" parent="Node2D"]
+[node name="Cursor1" type="Node2D" parent="Node2D"]
+position = Vector2(600, 300)
 script = ExtResource("1_7xgbv")
+player_number = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/Cursor"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Cursor1"]
 position = Vector2(25, 25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7mqgm")
+
+[node name="Label" type="Label" parent="Node2D/Cursor1"]
+offset_left = 5.0
+offset_top = 13.0
+offset_right = 45.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="Cursor2" type="Node2D" parent="Node2D"]
+position = Vector2(50, 300)
+script = ExtResource("1_7xgbv")
+player_number = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Cursor2"]
+modulate = Color(0, 0.541176, 0.803922, 1)
+position = Vector2(25, 25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7mqgm")
+
+[node name="Label" type="Label" parent="Node2D/Cursor2"]
+offset_left = 5.0
+offset_top = 13.0
+offset_right = 45.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8072c")
+volume_db = -14.024
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

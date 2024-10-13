@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://beuqsxv25i1fq"]
+
+[ext_resource type="Script" path="res://WaveFunctionCollapse.gd" id="1_0ji0y"]
+[ext_resource type="Texture2D" uid="uid://b3j138ndd0o2v" path="res://highway/highway.png" id="1_kdeio"]
+[ext_resource type="Script" path="res://highway/highway_generator_2.gd" id="2_yn2gj"]
+[ext_resource type="Texture2D" uid="uid://ctajvq7n1tbfk" path="res://tilemap.png" id="3_5vvo4"]
+[ext_resource type="Texture2D" uid="uid://b0ey3qrxsl657" path="res://new_tileset.png" id="4_jq1ac"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j57rv"]
+texture = ExtResource("1_kdeio")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5wew"]
+texture = ExtResource("3_5vvo4")
+texture_region_size = Vector2i(1, 1)
+0:0/0 = 0
+7:15/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gedda"]
+texture = ExtResource("4_jq1ac")
+texture_region_size = Vector2i(50, 50)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_naava"]
+tile_size = Vector2i(50, 50)
+sources/0 = SubResource("TileSetAtlasSource_j57rv")
+sources/1 = SubResource("TileSetAtlasSource_e5wew")
+sources/3 = SubResource("TileSetAtlasSource_gedda")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0ji0y")
+
+[node name="Highway" type="Node2D" parent="."]
+script = ExtResource("2_yn2gj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -19.0
+offset_top = -20.0
+offset_right = 1034.0
+offset_bottom = 1045.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_naava")
+format = 2

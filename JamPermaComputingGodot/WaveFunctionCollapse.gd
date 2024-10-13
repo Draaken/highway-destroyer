@@ -6,14 +6,22 @@ extends Node2D
 
 var random = RandomNumberGenerator.new()
 
-var map_size = Vector2(20,20)
+var map_size = Vector2(14,14)
 
 var cells_waves: Array = []
+var cells_collapsed: Array = []
+var cells_durability: Array = []
 
 var is_collapsing = false
 var is_generating = true
+var is_paused = true
+
+
+var total_cells_set = 0
+var max_cells = 200
 
 var names = [
+	"road",
 	"right_left",
 	"top_down",
 	"turn_left_top",
@@ -27,6 +35,11 @@ var names = [
 	"compost",
 	"water",
 	"tree",
+	"sand_right",
+	"sand_left",
+	"sand_top",
+	"sand_bottom",
+	"sand_corner",
 	]
 	
 #var tiles_data: Dictionary = {
@@ -44,6 +57,7 @@ var names = [
 #}
 var tiles_data: Dictionary = {
 	#[atlas_coord, alternative_tiles, weight]
+	"road": [Vector2(0,0),0,0],
 	"right_left": [Vector2(0,0), 1],
 	"top_down": [Vector2(0,0), 1],
 	"turn_left_top": [Vector2(0,0), 0.2],
@@ -54,14 +68,22 @@ var tiles_data: Dictionary = {
 	"branch_right": [Vector2(0,0),0.1],
 	"branch_top": [Vector2(0,0),0.1],
 	"branch_bottom": [Vector2(0,0),0.1],
-	"compost": [Vector2(3,0),1000],
-	"water": [Vector2(2,0),1500],
-	"tree": [Vector2(1,0),500],
+	"compost": [Vector2(3,0),1000,2],
+	"water": [Vector2(2,0),1500, 0],
+	"tree": [Vector2(1,0),1000, 3],
+	"sand": [Vector2(5,0),0,1],
+	"sand_right": [Vector2(9,0),800,1],
+	"sand_left": [Vector2(8,0),800,1],
+	"sand_top": [Vector2(6,0),800,1],
+	"sand_bottom": [Vector2(5,0),800,1],
+	"sand_corner": [Vector2(7,0),600,1]
 }
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if $"/root/Players".number_of_players == 1:
+		$Cursor2.queue_free()
 	random.randomize()
 	
 	rules = rules.split("(")
@@ -72,43 +94,54 @@ func _ready():
 	
 	for i in map_size.x:
 		cells_waves.append([])
+		cells_collapsed.append([])
+		cells_durability.append([])
 		for y in map_size.y:
+			cells_collapsed[i].append(false)
 			cells_waves[i].append(names)
+			cells_durability[i].append(0)
 			
-	start_highway()
+	#start_highway()
+	var timer = Timer.new()
+	timer.wait_time = 5
+	add_child(timer)
+	timer.start()
+	await timer.timeout
+	$"Highway".create_pilot()
 	
 
 func start_highway():
-	var random_tile: Vector2 
-	match random.randi_range(0,3):
-		0: 
-			random_tile.x = map_size.x-1
-			random_tile.y = random.randi_range(0,map_size.y-1)
-		1: 
-			random_tile.x = 0
-			random_tile.y = random.randi_range(0,map_size.y-1)
-		2: 
-			random_tile.y = map_size.y-1
-			random_tile.x = random.randi_range(0,map_size.x-1)
-		3: 
-			random_tile.y = 0
-			random.randi_range(0,map_size.x-1)
+	pass
+	#var random_tile: Vector2 
+	#match random.randi_range(0,3):
+		#0: 
+			#random_tile.x = map_size.x-1
+			#random_tile.y = random.randi_range(0,map_size.y-1)
+		#1: 
+			#random_tile.x = 0
+			#random_tile.y = random.randi_range(0,map_size.y-1)
+		#2: 
+			#random_tile.y = map_size.y-1
+			#random_tile.x = random.randi_range(0,map_size.x-1)
+		#3: 
+			#random_tile.y = 0
+			#random.randi_range(0,map_size.x-1)
 			
 	#Vector2(random.randi_range(0,map_size.x),random.randi_range(0,map_size.y))
-	cells_waves[random_tile.x][random_tile.y] = [
-	"right_left",
-	"top_down",
-	"branch_left",
-	"branch_right",
-	"branch_top",
-	"branch_bottom",
-	]
-	set_cell(random_tile, true)
-	await get_tree().create_timer(random.randi_range(4,10)).timeout
-	start_highway()
+	#cells_waves[random_tile.x][random_tile.y] = [
+	#"right_left",
+	#"top_down",
+	#"branch_left",
+	#"branch_right",
+	#"branch_top",
+	#"branch_bottom",
+	#]
+	#set_cell(random_tile, true)
+	#await get_tree().create_timer(random.randi_range(4,10)).timeout
+	#start_highway()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if is_generating:
+	if not is_paused:
 		if is_collapsing == false:
 			var lower_entrophy = 1000
 			var lower_enthropy_cells = []
@@ -118,6 +151,8 @@ func _process(delta):
 					if cells_waves[x][y].size() <= lower_entrophy:
 						if cells_waves[x][y].size() == 0:
 							continue
+						if cells_waves[x][y].size() < lower_entrophy:
+							lower_enthropy_cells = []
 						is_there_uncollapsed_cell = true
 						lower_enthropy_cells.append(Vector2(x,y))
 						lower_entrophy = cells_waves[x][y].size()
@@ -126,8 +161,8 @@ func _process(delta):
 				#return
 			if not lower_enthropy_cells.is_empty():
 				set_cell(lower_enthropy_cells[random.randi_range(0,lower_enthropy_cells.size()-1)])
-			if not is_there_uncollapsed_cell: 
-				is_generating = false
+			#if not is_there_uncollapsed_cell: 
+				#is_generating = false
 	
 	
 func set_cell(cell_coord, is_highway:bool = false):
@@ -160,21 +195,32 @@ func set_cell(cell_coord, is_highway:bool = false):
 	#set the cell to this tile
 	if choosen_tile != "":
 		tilemap.set_cell(0, cell_coord,3, tiles_data[choosen_tile][0])
+		cells_waves[cell_coord.x][cell_coord.y] = choosen_tile
+		cells_collapsed[cell_coord.x][cell_coord.y] = true
+		cells_durability[cell_coord.x][cell_coord.y] = tiles_data[choosen_tile][2]
+		total_cells_set += 1
+		if total_cells_set >= max_cells:
+			end_game()
+		
 		print(cell_coord)
 	
 	cells_waves[cell_coord.x][cell_coord.y]=[]
 	#update the neighbouring cells
-	await get_tree().create_timer(1).timeout
+	var timer = Timer.new()
+	timer.wait_time = 1
+	add_child(timer)
+	timer.start()
+	await timer.timeout
 	collapse_cell(Vector2(cell_coord.x+1,cell_coord.y), "right", choosen_tile)
 	collapse_cell(Vector2(cell_coord.x-1,cell_coord.y), "left", choosen_tile)
 	collapse_cell(Vector2(cell_coord.x,cell_coord.y+1), "bottom", choosen_tile)
 	collapse_cell(Vector2(cell_coord.x,cell_coord.y-1), "top", choosen_tile)
 	
-	if is_highway:
-		set_cell(Vector2(cell_coord.x+1,cell_coord.y), true)
-		set_cell(Vector2(cell_coord.x-1,cell_coord.y), true)
-		set_cell(Vector2(cell_coord.x,cell_coord.y+1), true)
-		set_cell(Vector2(cell_coord.x,cell_coord.y-1), true)
+	#if is_highway:
+		#set_cell(Vector2(cell_coord.x+1,cell_coord.y), true)
+		#set_cell(Vector2(cell_coord.x-1,cell_coord.y), true)
+		#set_cell(Vector2(cell_coord.x,cell_coord.y+1), true)
+		#set_cell(Vector2(cell_coord.x,cell_coord.y-1), true)
 	
 func collapse_cell(cell_coord, direction, old_cell_tile):
 	if cell_coord.x > map_size.x-1 || cell_coord.x < 0 || cell_coord.y > map_size.y-1 || cell_coord.y < 0:
@@ -182,7 +228,7 @@ func collapse_cell(cell_coord, direction, old_cell_tile):
 	if cells_waves[cell_coord.x][cell_coord.y].size() == 0:
 		return
 	is_collapsing = true
-	cells_waves[cell_coord.x][cell_coord.y]
+	
 	var temp_valid_cells = []
 	for i in rules:
 		var rules_array = i.split(",")
@@ -192,7 +238,19 @@ func collapse_cell(cell_coord, direction, old_cell_tile):
 			continue
 		if rules_array[2] != direction:
 			continue
-		temp_valid_cells.append(rules_array[1])
+		#temp_valid_cells.append(rules_array[1])
+		var already_exist = false
+		for a in temp_valid_cells:
+			if a == rules_array[1]:
+				already_exist = true
+				continue
+		if already_exist: continue
+				
+		for u in cells_waves[cell_coord.x][cell_coord.y]:
+			if rules_array[1] == u:
+				temp_valid_cells.append(u)
+	
+	
 	cells_waves[cell_coord.x][cell_coord.y] = temp_valid_cells
 	
 	is_collapsing = false
@@ -204,5 +262,11 @@ func collapse_cell(cell_coord, direction, old_cell_tile):
 	#check if the rule is about the right neigbour and the right direction
 	#if yes, add the tile to the new cell options
 	#if not ignore it
-
+func end_game():
+	if get_tree():
+		get_tree().change_scene_to_file("res://endscene.tscn")
 	
+
+
+func _on_audio_stream_player_finished():
+	pass # Replace with function body.
