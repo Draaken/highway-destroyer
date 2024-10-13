@@ -156,8 +156,8 @@ texture = ExtResource("10_cpbts")
 expand_mode = 1
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="quit" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Num1" to="." method="_on_num_1_pressed"]
 [connection signal="pressed" from="Num2" to="." method="_on_num_2_pressed"]

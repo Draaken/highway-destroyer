@@ -1,8 +1,8 @@
 extends Node2D
 @onready var tilemap: TileMap = $TileMap
 
-@onready var rules_file = FileAccess.open("res://highway/rules.txt", FileAccess.READ)
-@onready var rules = rules_file.get_as_text()
+@onready var rules_file = FileAccess.get_file_as_string("res://highway/rules.json")
+@onready var rules = rules_file
 
 var random = RandomNumberGenerator.new()
 
