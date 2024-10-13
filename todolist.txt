@@ -1,0 +1,11 @@
+- Pause the rendering process to let the player
+create the first tiles
+- limit the number of tiles available to the player
+-generate pre existing tiles? water?
+fix the vertical tree generation
+- fix the road generation
+-make background
+- end of the game and reload
+- intro text? after or before the game?
+- sprites/animations? 
+- tile replacement system?

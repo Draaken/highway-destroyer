@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1pku33q3qout"]
+
+[ext_resource type="Script" path="res://Cursor.gd" id="1_7xgbv"]
+[ext_resource type="PackedScene" uid="uid://beuqsxv25i1fq" path="res://HighwayGenerator.tscn" id="1_wv3dv"]
+[ext_resource type="Texture2D" uid="uid://d1r8ry7e0u44t" path="res://cursor.png" id="2_7mqgm"]
+
+[node name="MainScence" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_wv3dv")]
+
+[node name="Cursor" type="Node2D" parent="Node2D"]
+script = ExtResource("1_7xgbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Cursor"]
+position = Vector2(25, 25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7mqgm")

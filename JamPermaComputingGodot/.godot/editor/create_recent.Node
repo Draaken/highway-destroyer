@@ -1,2 +1,7 @@
-Node2D
+ColorRect
 TileMap
+Node2D
+Sprite2D
+Camera2D
+TextureButton
+Button

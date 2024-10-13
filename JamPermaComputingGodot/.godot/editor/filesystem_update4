@@ -1,2 +1,4 @@
-res://Highway/Highway.tscn
-res://Highway/WaveFunctionCollapse.gd
+res://HighwayGenerator.tscn
+res://main_scence.tscn
+res://highway_generator_2.tscn
+res://player_tiles.tscn
